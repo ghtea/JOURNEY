@@ -1,0 +1,72 @@
+
+/* light starts */
+
+body {
+  color: #222;
+}
+
+a {
+  color: #34495e;
+}
+
+.iconMove {
+  fill: #888;
+}
+
+.iconShow {
+  fill: #888;
+}
+
+
+.tagJn {
+  border-color: #888;
+}
+
+body {
+  background-color: #f0f0f9;
+}
+
+.journey {
+  background-color: #f8f8f8;
+}
+
+
+.journey[data-focus="yes"] {
+  border-color: #02BBFF;
+}
+
+.journey[data-focus="yes"] .iconShow {
+  fill: #02BBFF;
+}
+
+.listMission > div{
+  border-top-color: #888;
+}
+
+
+/* light ends */
+
+
+@media (prefers-color-scheme: dark) {
+/* dark starts */
+  
+body {
+  color: #ddd;
+}
+
+a {
+  color: #ddd;
+}
+
+body {
+  background-color: #000;
+}
+
+.journey {
+  background-color: #101019;
+}
+
+
+
+/* dark ends */
+}

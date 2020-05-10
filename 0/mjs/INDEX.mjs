@@ -32,14 +32,23 @@ const objJourneysO = {
 class file extends Component {
  
 constructor(props) {
-     super(props);
+   super(props);
+     
+   this._toggleOpenJn = (event, id) => {
+   /*event.persist(); */
+   let { objJourneys } = this.state;
+   objJourneys[id]["tfOpen"] = !objJourneys[id]["tfOpen"];
+   this.setState({
+    objJourneys
+   });
+ }
+
+     
      
    this.state = {
   
-  /*saveObjGoals: this._saveObjGoals, */
-  
-  objJourneys: {}
-       
+   objJourneys: {}
+   , toggleOpenJn: this._toggleOpenJn
   
      };/* this.state */
      
@@ -50,8 +59,31 @@ constructor(props) {
 
 componentDidMount() {
     const valFromLocalStorage = JSON.parse(localStorage.getItem("objJourneys")) || this.state.objJourneys;
-    this.setState({ objJourneys: valFromLocalStorage })
-}
+    
+    this.setState(prevState => 
+    ({ objJourneys: valFromLocalStorage })
+    )
+    
+    
+   /* 전부 안보이게 */Object.keys(this.state.objJourneys).map(
+      key => {
+   
+this.setState(prevState => ({
+    objJourneys: {
+        ...prevState.objJourneys,
+        [key]: {
+            ...prevState.objJourneys[key],
+            tfOpen: false
+        }
+    }
+}))
+
+
+      }
+    ) /* map */
+    
+    
+} /* componentDidMount */
 
 
  

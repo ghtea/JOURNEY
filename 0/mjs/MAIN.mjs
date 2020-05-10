@@ -29,9 +29,15 @@ ${STORE => html`
 ${ Object.keys(STORE["objJourneys"]).map(key=>  html`
 
 <${Journey}
+  id=${STORE["objJourneys"][key]["id"]} 
+
   text=${STORE["objJourneys"][key]["text"]} 
   
   tags=${STORE["objJourneys"][key]["tags"]} 
+  
+  tfOpen=${STORE["objJourneys"][key]["tfOpen"]} 
+  
+  
 />
 
 `)}
