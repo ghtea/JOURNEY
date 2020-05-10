@@ -1,5 +1,6 @@
 import { html, Component, render, useState} from '../../common/standalone.module.js';
 
+import {Show, Move} from '../../svg/basicIcons.mjs';
 
 
 function Journey({text, tags}) {
@@ -10,11 +11,15 @@ function Journey({text, tags}) {
 <div class="journey">
   
   
-  <div class=""></div>
-  
+  <div class="divMove">
+    <${Move} />
+  </div>
+    
   <div class="titleJn">${text}</div>
   
-  <div class="btnsJn"> </div>
+  <div class="divShow"> 
+      <${Show} degree=${180}/>
+  </div>
   
   <div class="tagsJn">
   

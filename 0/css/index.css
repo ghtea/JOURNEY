@@ -50,7 +50,7 @@ body {
   justify-content: center;
   flex-direction: column;
   
-  color: #333;
+  color: #222;
   background-color: #f0f0f9;
 }
 
@@ -69,10 +69,14 @@ a {color: #ddd;}
 .header {
   display: flex;
   justify-content: center;
-  justify-self: center;
+  align-items: center;
   
   font-size: 2rem;
   font-weight: 700;
+  
+  width: 360px;
+  height: 90px;
+  
 }
 
 .journey {
@@ -88,18 +92,18 @@ a {color: #ddd;}
   box-sizing: border-box;
   
   display: grid;
-  grid-template-columns: 50px auto 50px;
+  grid-template-columns: 30px auto 40px;
   grid-template-rows: auto auto;
-  gap: 0px 0px;
+  gap: 0px 5px;
   
   grid-template-areas:
     "left title right"
-    "left tags tags";
+    "left tags right";
     
   justify-items: start;
   align-items: center;
   
-  background-color: #fff;
+  background-color: #f8f8f8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -109,10 +113,9 @@ a {color: #ddd;}
 
 }
 
-
+.divMove {grid-area: left;}
 .titleJn {grid-area: title;}
-
-.btnsJn {grid-area: right;}
+.divShow {grid-area: right;}
 .tagsJn {grid-area: tags;}
 
 
@@ -127,10 +130,31 @@ a {color: #ddd;}
 
 
 .titleJn {
+  font-size: 1.1rem;
   margin-left: 4px;
 }
 
+
+.divMove, .divShow {
+  justify-self: center;
+}
+
+
+.iconMove {
+  width: 20px;
+  height: 20px;
+  fill: #888;
+}
+
+.iconShow {
+  width: 24px;
+  height: 24px;
+  fill: #888;
+}
+
 .tagJn {
+  font-size: 0.9rem;
+
   margin: 4px;
   
   padding-left: 4px;

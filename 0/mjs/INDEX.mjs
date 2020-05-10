@@ -1,33 +1,12 @@
 import { html, Component, render, useState} from '../common/standalone.module.js';
 
+
 import {STORE} from './STORE.mjs';
 import {ALL} from './ALL.mjs';
  
- 
-/* components */
-class file extends Component {
- 
- constructor(props) {
-     super(props);
-     
-     
-     /*
-     
-     this._saveObjGoals = () => {
-       
-         this.setState({
-           message: "Bye bye"
-         });
 
-     };  this._saveObjGoals */
-   
-   
-     
-this.state = {
-  
-  /*saveObjGoals: this._saveObjGoals, */
-  
-  objJourneys: {
+/*
+const objJourneysO = {
    "0":
       {   
       text: "앱 개발해서 수익 얻기"
@@ -46,20 +25,37 @@ this.state = {
       ,tags: ["life", "fashion"]
       ,id: "2"
       }
-            
-   }
-       
+   };
+*/
 
+/* components */
+class file extends Component {
+ 
+constructor(props) {
+     super(props);
+     
+   this.state = {
+  
+  /*saveObjGoals: this._saveObjGoals, */
+  
+  objJourneys: {}
+       
   
      };/* this.state */
      
-     
-   } /* constructor */
+   
+} /* constructor */
+   
+   
+
+componentDidMount() {
+    const valFromLocalStorage = JSON.parse(localStorage.getItem("objJourneys")) || this.state.objJourneys;
+    this.setState({ objJourneys: valFromLocalStorage })
+}
+
 
  
- 
- 
-  render() {
+render() {
      return html`
 <${STORE.Provider} value=${this.state}>
          <${ALL} />
@@ -68,18 +64,23 @@ this.state = {
    }
  }
 
-/*
-       <${STORE.Provider} value=${this.state}>
-         <${ALL} />
-       <//>
-*/
 
+function useSortable() {
+   var el = document.getElementById('listJn');
+var sortable = Sortable.create(el, {
+	handle: ".iconMove"
+});
+
+}
 
 
 function init() {
   /*loadListWebsite();*/
   render(html`<${file}/>`, document.getElementById("root"));
+  
+  useSortable();
 }
+  
 
 init();
 
