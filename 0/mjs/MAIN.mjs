@@ -31,14 +31,19 @@ ${STORE => html`
 
 ${STORE["tfCreating"] ? html`
   <div 
-  class="creating"
+  class="groupInputCreatingJn"
   >
-    creating
+  
+    <input class="inputTitleJn" type="text" placeholder="   title" />
+
+    <input class="inputTagsJn" type="text" placeholder="tag1, tag2, tag3" />
+    
+    
   </div>
 ` 
 : html`
   <div class="title">
-    Journeys
+    Journey
   </div>
 `
 }

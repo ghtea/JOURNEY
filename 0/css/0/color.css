@@ -59,6 +59,13 @@ a {
   fill: #222;
 }
 
+.inputTitleJn, .inputTagsJn {
+  color: #888;
+  border-color: #f8f8f8;
+  background-color: #f8f8f8;
+}
+
+
 
 /* light ends */
 
