@@ -3,22 +3,6 @@ import { html, Component, render, useState} from '../common/standalone.module.js
 import {STORE} from './STORE.mjs';
 import {MAIN} from './MAIN.mjs';
 
-/*
-function loadListWebsite() {
-  
-  const loadedListWebsite = localStorage.getItem("listWebsite");
-  
-  if (loadedListWebsite !== null) {
-    const parsedListWebsite = JSON.parse(loadedListWebsite);
-    
-   listWebsite = parsedListWebsite;
-  }
-  
-  else {
-   listWebsite = [];
-  }
-}
-*/
  
  
 /* components */

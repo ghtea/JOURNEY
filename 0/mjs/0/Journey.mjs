@@ -6,7 +6,14 @@ import {Show, Move} from '../../svg/basicIcons.mjs';
 
 function Journey({id, title, tfOpen}) {
 
-
+  const [tfCreatingMission, setCreatingMission] = useState(false);
+  
+  function startCreatingMission(event) {
+  console.log("hi");
+   setCreatingMission(true);
+}
+  
+  
   return html`
 
   <${STORE.Consumer}>
@@ -48,11 +55,24 @@ ${STORE => html`
 ${tfOpen ? html`
 <div class="detailsJn">
   <div> delete </div>
-  <div> add mission </div>
+  
+  <div
+  onClick=${(event)=> startCreatingMission(event)}
+  > add mission </div>
+  
   <div> edit </div>
 </div>
 
 <div class="listMission">
+
+  ${tfCreatingMission ? html`
+  <div class="">
+      <input class="inputTitleMs" type="text" placeholder="title" />
+  </div>
+  `
+  : html ``}
+  
+  
   <div> work </div>
   <div> eat </div>
   <div> sleep </div>

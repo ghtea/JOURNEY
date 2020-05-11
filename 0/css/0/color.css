@@ -66,7 +66,7 @@ a {
   fill: #222;
 }
 
-.inputTitleJn {
+.inputTitleJn, .inputTitleMs {
   color: #222;
   border-color: #f8f8f8;
   background-color: #f8f8f8;
@@ -75,6 +75,9 @@ a {
 
 
 /* light ends */
+
+
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -113,7 +116,7 @@ a {
 }
 
 
-.inputTitleJn {
+.inputTitleJn, .inputTitleMs {
   color: #ddd;
   border-color: #191920;
   background-color: #191920;

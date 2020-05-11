@@ -57,6 +57,9 @@ input {
   -moz-box-shadow: none;
   box-shadow: none;
   padding: 0px;
+  
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 body {
@@ -170,18 +173,18 @@ body {
 .inputTitleJn {
   width: 200px;
   height: 32px;
-  
-  margin-top: 2px;
-  margin-bottom: 2px;
-  
-  font-size: 1rem;
-  
   border-radius: 10px;
-  box-sizing: border-box;
   
   padding-left: 10px;
 }
 
+.inputTitleMs {
+  width: 200px;
+  height: 28px;
+  border-radius: 9px;
+  
+  padding-left: 10px;
+}
 
 
 

@@ -5,28 +5,6 @@ import {STORE} from './STORE.mjs';
 import {ALL} from './ALL.mjs';
  
 
-/*
-const objJourneysO = {
-   "0":
-      {   
-      text: "앱 개발해서 수익 얻기"
-      ,tags: ["webDev", "webDesign", "ui", "dataViz"]
-      ,id: "0"
-      }
-   ,"1":
-      {   
-      text: "로고 디자인으로 수익 얻기"
-      ,tags: ["logo", "webDesign"]
-      ,id: "1"
-      }
-   ,"2":
-      {   
-      text: "적정 체중, 건강"
-      ,tags: ["life", "fashion"]
-      ,id: "2"
-      }
-   };
-*/
 
 /* components */
 class file extends Component {
@@ -34,6 +12,7 @@ class file extends Component {
 constructor(props) {
    super(props);
      
+   /* functions */
    this._toggleOpenJn = (event, id) => {
    let { objJourneys } = this.state;
    objJourneys[id]["tfOpen"] = !objJourneys[id]["tfOpen"];
@@ -41,7 +20,7 @@ constructor(props) {
     objJourneys
    });
  }
- 
+   
    this._toggleCreating = (event) => {
    let { tfCreating } = this.state;
    tfCreating = !tfCreating;
@@ -49,6 +28,10 @@ constructor(props) {
     tfCreating
    });
    }
+   
+   
+   
+   
 
    this._storeObjJourneys = (newValue) => {
    let { objJourneys } = this.state;
@@ -56,10 +39,21 @@ constructor(props) {
    this.setState({
     objJourneys: newValue
    });
-   
    localStorage.setItem("objJourneys", JSON.stringify(objJourneys));
    
    } /* this._storeObjJourneys */
+   
+   
+   
+   this._storeObjListMissions = (newValue) => {
+   let { objListMissions } = this.state;
+   
+   this.setState({
+    objListMissions: newValue
+   });
+   localStorage.setItem("objListMissions", JSON.stringify(objListMissions));
+   
+   } /* this._storeObjListMissions */
 
 
      
@@ -67,6 +61,9 @@ constructor(props) {
   
    objJourneys: {}
    , storeObjJourneys: this._storeObjJourneys
+   
+   , objListMissions: {}
+   , storeObjListMissions: this._storeObjListMissions
    
    , toggleOpenJn: this._toggleOpenJn
    
