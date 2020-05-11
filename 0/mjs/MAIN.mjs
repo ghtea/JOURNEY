@@ -1,9 +1,10 @@
 import { html, Component, render, useState} from '../common/standalone.module.js';
 
 
-
 import {STORE} from './STORE.mjs';
 import {Journey} from './0/Journey.mjs'; 
+
+import {Create, Show} from '../svg/basicIcons.mjs';
 
 /*
 import {ItemWebsite} from './0/ItemWebsite.mjs';
@@ -20,7 +21,34 @@ forceRerender
 ${STORE => html`
 
 <div class="header">
-  Journeys
+  <div 
+  class="divCreate"
+  onClick=${(event)=> STORE["toggleCreating"](event)}
+  >
+      <${Create} />
+    </div>
+
+
+${STORE["tfCreating"] ? html`
+  <div 
+  class="creating"
+  >
+    creating
+  </div>
+` 
+: html`
+  <div class="title">
+    Journeys
+  </div>
+`
+}
+
+    <div class="divShowAll">
+      <${Show} 
+        degree=${180}
+      />
+    </div>
+
 </div>
 
 <div id="listJn">
@@ -41,8 +69,8 @@ ${ Object.keys(STORE["objJourneys"]).map(key=>  html`
 />
 
 `)}
-
 </div>
+
 
 
 `}

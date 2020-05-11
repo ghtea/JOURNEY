@@ -3,6 +3,7 @@
 
 body {
   color: #222;
+  background-color: #f0f0f9;
 }
 
 a {
@@ -22,12 +23,16 @@ a {
   border-color: #888;
 }
 
-body {
-  background-color: #f0f0f9;
-}
+
 
 .journey {
   background-color: #f8f8f8;
+  border-color: transparent;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.journey .titleJn {
+  color: #000;
 }
 
 
@@ -39,8 +44,19 @@ body {
   fill: #02BBFF;
 }
 
+
 .listMission > div{
   border-top-color: #888;
+}
+
+
+.divCreate, .divShowAll {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.iconCreate, .divShowAll .iconShow {
+  fill: #222;
 }
 
 
@@ -52,21 +68,31 @@ body {
   
 body {
   color: #ddd;
+  background-color: #000;
 }
 
 a {
   color: #ddd;
 }
 
-body {
-  background-color: #000;
-}
-
 .journey {
   background-color: #101019;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.journey .titleJn {
+  color: #fff;
 }
 
 
+.divCreate, .divShowAll {
+  background-color: #101019;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.iconCreate, .divShowAll .iconShow {
+  fill: #ddd;
+}
 
 /* dark ends */
 }

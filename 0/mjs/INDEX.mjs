@@ -42,13 +42,25 @@ constructor(props) {
     objJourneys
    });
  }
+ 
+   this._toggleCreating = (event) => {
+   let { tfCreating } = this.state;
+   tfCreating = !tfCreating;
+   this.setState({
+    tfCreating
+   });
+   }
 
      
      
    this.state = {
   
    objJourneys: {}
+   
    , toggleOpenJn: this._toggleOpenJn
+   
+   , tfCreating: false
+   , toggleCreating: this._toggleCreating
   
      };/* this.state */
      
