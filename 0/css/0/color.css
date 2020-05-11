@@ -26,9 +26,16 @@ a {
 
 
 .journey {
-  background-color: #f8f8f8;
   border-color: transparent;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.partBasicJn {
+  background-color: #f8f8f8;
+}
+
+.partDetailsJn {
+  color: #000;
 }
 
 .journey .titleJn {
@@ -38,6 +45,7 @@ a {
 
 .journey[data-focus="yes"] {
   border-color: #02BBFF;
+  background-color: #02BBFF;
 }
 
 .journey[data-focus="yes"] .iconShow {
@@ -48,8 +56,12 @@ a {
   border-color: #222;
 }
 
+.listMission {
+  
+}
+
 .listMission > div{
-  border-top-color: #888;
+  border-top-color: #02BBFF;
 }
 
 
@@ -93,9 +105,18 @@ a {
 }
 
 .journey {
-  background-color: #191920;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+  
 }
+
+.partBasicJn {
+  background-color: #191920;
+}
+.partDetailsJn {
+  /* common */
+}
+
+
 
 .journey .titleJn {
   color: #fff;

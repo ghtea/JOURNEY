@@ -24,6 +24,7 @@ ${STORE => html`
   data-focus="${tfOpen ? "yes" : "no"}"
   >
   
+<div class="partBasicJn">
   
   <div class="divMove">
     <${Move} />
@@ -45,38 +46,61 @@ ${STORE => html`
   ongoing
   </div>
   
-  <div class="numMissionJn">
-  1 completed
+  <div class="numDoneMissionJn">
+  1 done
+  </div>
+  
+  <div class="numLeftMissionJn">
+  1 left
   </div>
   
   
-</div>
+</div> <!-- .basicJn -->
 
-${tfOpen ? html`
-<div class="detailsJn">
-  <div> delete </div>
-  
+  ${tfOpen ? html`
+<div class="partDetailsJn">
+  <div> edit </div>
+
   <div
   onClick=${(event)=> startCreatingMission(event)}
-  > add mission </div>
+  > create mission </div>
   
-  <div> edit </div>
-</div>
+  <div> delete </div>
+</div> <!-- detailsJn -->
+  `
+  : html`
+  
+  `}
+  
+  
+</div> <!-- .journey -->
+
+${tfOpen ? html`
 
 <div class="listMission">
 
   ${tfCreatingMission ? html`
   <div class="">
-      <input class="inputTitleMs" type="text" placeholder="title" />
+  
+    <div> exit </div>
+    <input class="inputTitleMs" type="text" placeholder="title" />
+    <div> add </div>
+    
   </div>
   `
   : html ``}
   
+  <div>
+  <div> edit </div>
   
-  <div> work </div>
-  <div> eat </div>
-  <div> sleep </div>
-</div>
+  <div
+  class="titleMs"
+  > - work </div>
+  
+  <div> delete </div>
+  </div>
+  
+</div> <!-- listMission -->
 ` 
 : html``
 }

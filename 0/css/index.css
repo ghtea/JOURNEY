@@ -50,6 +50,9 @@ a {
 }
 
 input {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+
   border:none;
   background-image:none;
   background-color:transparent;
@@ -200,41 +203,77 @@ body {
 }
 
 .journey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
   width: 360px;
-  height: 80px;
   
-  padding: 7px;
-  
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
   
   border-radius: 20px;
   border-width: 2px;
   border-style: solid;
   
   box-sizing: content-box;
+}
+
+
+
+.partBasicJn {
+  width: 100%;
+
+  
+  border-radius: 20px;
   
   display: grid;
-  grid-template-columns: 30px 1fr 1fr 30px;
-  grid-template-rows: auto auto;
+  grid-template-columns: 50px 1fr 1fr 1fr 50px;
+  grid-template-rows: 50px 40px;
   gap: 5px 5px;
   
   grid-template-areas:
-    "left title title right"
-    "left bottomLeft bottomRight right";
-    
+    "left title title title right"
+    "left bottomLeft bottomMiddle bottomRight right";
+  
+  justify-content: center;
   justify-items: center;
   align-items: center;
   
 }
 
+.journey[data-focus="yes"] .partBasicJn {
+  border-radius: 20px 20px 5px 5px;
+}
+
+
+.partDetailsJn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  
+  width: 100%;
+  
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  grid-template-rows: 36px;
+  gap: 5px 0px;
+  
+  border-radius: 0 0 20px 20px;
+  
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
 
 
 .divMove {grid-area: left;}
 .titleJn {grid-area: title;}
 .divShow {grid-area: right;}
+
 .statusJn {grid-area: bottomLeft;}
-.numMissionJn {grid-area: bottomRight;}
+
+.numDoneMissionJn {grid-area: bottomMiddle;}
+.numLeftMissionJn {grid-area: bottomRight;}
 
 
 
@@ -242,6 +281,8 @@ body {
 .titleJn {
 
   font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-left: 4px;
 }
 
@@ -262,7 +303,8 @@ body {
 }
 
 
-.statusJn, .numMissionJn {
+.statusJn, .numDoneMissionJn, .numLeftMissionJn {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,46 +322,50 @@ body {
 
 
 
-.detailsJn {
-  width: 95%;
-  height: 30px;
+.listMission > div {
   
   display: grid;
   grid-template-columns: 60px auto 60px;
   grid-template-rows: auto;
   gap: 0px 5px;
   
-  
   justify-items: center;
   align-items: center;
 
 }
 
+.titleMs {
+  justify-self: start;
+}
+
 
 .listMission {
   width: 100%;
+  margin-bottom: 10px;
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
   
   flex-direction: column;
+  
+  border-radius: 4px;
+  
+
 }
 
 
 .listMission > div {
-  font-size: 1.1rem;
-  height: 40px;
+  height: 36px;
   width: 90%;
   
-  border-top-width: 1px;
-  border-top-style: solid;
+  font-size: 1rem;
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
 }
+
+
 
 
