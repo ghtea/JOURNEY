@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: #34495e;
+  color: #222;
 }
 
 .iconMove {
@@ -44,27 +44,34 @@ a {
   fill: #02BBFF;
 }
 
+.statusJn, .numMissionJn {
+  border-color: #222;
+}
 
 .listMission > div{
   border-top-color: #888;
 }
 
 
-.divCreate, .divShowAll {
+.divCreateJn, .divShowAllJn
+,.divCancelJn, .divAddJn
+{
   background-color: #f8f8f8;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-.iconCreate, .divShowAll .iconShow {
+
+.iconCreate, .divShowAllJn .iconShow
+,.iconX, .iconPlus {
   fill: #222;
 }
 
-.inputTitleJn, .inputTagsJn {
-  color: #888;
+.inputTitleJn {
+  color: #222;
   border-color: #f8f8f8;
   background-color: #f8f8f8;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
-
 
 
 /* light ends */
@@ -83,7 +90,7 @@ a {
 }
 
 .journey {
-  background-color: #101019;
+  background-color: #191920;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
 }
 
@@ -92,13 +99,30 @@ a {
 }
 
 
-.divCreate, .divShowAll {
-  background-color: #101019;
+.divCreateJn, .divShowAllJn
+,.divCancelJn, .divAddJn
+{
+  background-color: #191920;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
 }
 
-.iconCreate, .divShowAll .iconShow {
+
+.iconCreate, .divShowAllJn .iconShow
+,.iconX, .iconPlus {
   fill: #ddd;
+}
+
+
+.inputTitleJn {
+  color: #ddd;
+  border-color: #191920;
+  background-color: #191920;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+
+.statusJn, .numMissionJn {
+  border-color: #ddd;
 }
 
 /* dark ends */

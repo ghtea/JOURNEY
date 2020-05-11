@@ -35,7 +35,6 @@ constructor(props) {
    super(props);
      
    this._toggleOpenJn = (event, id) => {
-   /*event.persist(); */
    let { objJourneys } = this.state;
    objJourneys[id]["tfOpen"] = !objJourneys[id]["tfOpen"];
    this.setState({
@@ -51,11 +50,23 @@ constructor(props) {
    });
    }
 
-     
+   this._storeObjJourneys = (newValue) => {
+   let { objJourneys } = this.state;
+   
+   this.setState({
+    objJourneys: newValue
+   });
+   
+   localStorage.setItem("objJourneys", JSON.stringify(objJourneys));
+   
+   } /* this._storeObjJourneys */
+
+
      
    this.state = {
   
    objJourneys: {}
+   , storeObjJourneys: this._storeObjJourneys
    
    , toggleOpenJn: this._toggleOpenJn
    

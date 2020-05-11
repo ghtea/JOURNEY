@@ -1,6 +1,6 @@
 {
   "bgColor" : "#e9f0ff",
-  "objJourneys" : "{\"0\":{\"text\":\"Web-App\",\"tags\":[\"webDev\",\"webDesign\",\"ui\",\"dataViz\"],\"id\":\"0\"},\"1\":{\"text\":\"Logo Design\",\"tags\":[\"logo\",\"webDesign\"],\"id\":\"1\"},\"2\":{\"text\":\"Appearance\",\"tags\":[\"health\",\"fashion\"],\"id\":\"2\"}}",
+  "objJourneys" : "{\"1589195389921\":{\"title\":\"Ddd\",\"id\":\"1589195389921\",\"status\":\"planned\",\"numMission\":0},\"1589198396038\":{\"title\":\"ㅇㅇ\",\"id\":\"1589198396038\",\"status\":\"planned\",\"numMission\":0}}",
   "toDos" : "[{\"text\":\"Dd\",\"id\":1}]",
   "listWebsite" : "[{\"title\":\"Hhff\",\"url\":\"\",\"color\":8,\"key\":\"1588773813229\",\"lastClick\":1588773813229,\"numberClick\":0,\"hp\":0.8,\"sinceLastClick\":224778092},{\"title\":\"Hh\",\"url\":\"\",\"color\":5,\"key\":\"1588850455144\",\"lastClick\":1588850455144,\"numberClick\":0,\"hp\":0.8,\"sinceLastClick\":148136183},{\"title\":\"Dd\",\"url\":\"\",\"color\":4,\"key\":\"1588850455321\",\"lastClick\":1588850455321,\"numberClick\":0,\"hp\":0.8,\"sinceLastClick\":148136007}]",
   "coords" : "{\"latitude\":37.57861,\"longitude\":126.97722}"

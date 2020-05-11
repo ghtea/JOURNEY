@@ -91,7 +91,7 @@ body {
   
 }
 
-.divCreate {
+.divCreateJn {
   
   width: 48px;
   height: 48px;
@@ -108,32 +108,7 @@ body {
   height: 28px;
 }
 
-.groupInputCreatingJn {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.inputTitleJn, .inputTagsJn {
-  width: 200px;
-  height: 32px;
-  
-  margin-top: 2px;
-  margin-bottom: 2px;
-  
-  font-size: 1rem;
-  
-  border-radius: 10px;
-  box-sizing: border-box;
-  
-  padding-left: 5px;
-}
-
-
-
-
-.header .divShowAll {
+.divCancelJn {
   
   width: 48px;
   height: 48px;
@@ -145,10 +120,72 @@ body {
   
 }
 
-.divShowAll .iconShow {
+.iconX {
+  width: 24px;
+  height: 24px;
+}
+
+
+.header .divShowAllJn {
+  
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.divShowAllJn .iconShow {
   width: 30px;
   height: 30px;
 }
+
+
+.divAddJn {
+  
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.iconPlus {
+  width: 24px;
+  height: 24px;
+}
+
+
+.groupInputCreatingJn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.inputTitleJn {
+  width: 200px;
+  height: 32px;
+  
+  margin-top: 2px;
+  margin-bottom: 2px;
+  
+  font-size: 1rem;
+  
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+  padding-left: 10px;
+}
+
+
+
+
+
 
 
 
@@ -175,15 +212,15 @@ body {
   box-sizing: content-box;
   
   display: grid;
-  grid-template-columns: 30px auto 40px;
+  grid-template-columns: 30px 1fr 1fr 30px;
   grid-template-rows: auto auto;
   gap: 5px 5px;
   
   grid-template-areas:
-    "left title right"
-    "left tags right";
+    "left title title right"
+    "left bottomLeft bottomRight right";
     
-  justify-items: start;
+  justify-items: center;
   align-items: center;
   
 }
@@ -193,21 +230,13 @@ body {
 .divMove {grid-area: left;}
 .titleJn {grid-area: title;}
 .divShow {grid-area: right;}
-.tagsJn {grid-area: tags;}
+.statusJn {grid-area: bottomLeft;}
+.numMissionJn {grid-area: bottomRight;}
 
 
-.tagsJn {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  
-}
 
 
 .titleJn {
-  justify-self: center;
 
   font-size: 1.2rem;
   margin-left: 4px;
@@ -229,18 +258,23 @@ body {
   height: 24px;
 }
 
-.tagJn {
-  font-size: 0.9rem;
 
-  margin: 4px;
+.statusJn, .numMissionJn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  padding-left: 4px;
-  padding-right: 4px;
+  font-size: 0.9rem;
   
-  border-radius: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
   border-width: 1px;
   border-style: solid;
+  box-sizing: border-box;
 }
+
+
 
 
 .detailsJn {

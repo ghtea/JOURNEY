@@ -4,7 +4,7 @@ import {STORE} from '../STORE.mjs';
 import {Show, Move} from '../../svg/basicIcons.mjs';
 
 
-function Journey({id, text, tags, tfOpen}) {
+function Journey({id, title, tfOpen}) {
 
 
   return html`
@@ -25,7 +25,7 @@ ${STORE => html`
   <div 
   class="titleJn"
   onClick=${(event)=> STORE["toggleOpenJn"](event, id)}
-  >${text}</div>
+  >${title}</div>
   
   <div 
     class="divShow"
@@ -34,14 +34,12 @@ ${STORE => html`
       <${Show} degree=${tfOpen ? 180 : 90}/>
   </div>
   
-  <div class="tagsJn">
-  
-${tags.map(tag => html`
-  <div class="tagJn">
-    ${tag}
+  <div class="statusJn">
+  ongoing
   </div>
-`)}
   
+  <div class="numMissionJn">
+  1 completed
   </div>
   
   
@@ -50,7 +48,7 @@ ${tags.map(tag => html`
 ${tfOpen ? html`
 <div class="detailsJn">
   <div> delete </div>
-  <div> add MISSION </div>
+  <div> add mission </div>
   <div> edit </div>
 </div>
 
