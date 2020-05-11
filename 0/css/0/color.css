@@ -60,7 +60,7 @@ a {
   
 }
 
-.listMission > div{
+.mission{
   border-top-color: #02BBFF;
 }
 
@@ -73,8 +73,13 @@ a {
 }
 
 
-.iconCreate, .divShowAllJn .iconShow
-,.iconX, .iconPlus {
+.iconCreate
+, .divShowAllJn .iconShow
+,.iconX
+, .iconPlus 
+, .mission .iconMove
+.mission .iconEdit
+{
   fill: #222;
 }
 
@@ -131,8 +136,13 @@ a {
 }
 
 
-.iconCreate, .divShowAllJn .iconShow
-,.iconX, .iconPlus {
+.iconCreate
+, .divShowAllJn .iconShow
+,.iconX
+, .iconPlus 
+, .mission .iconMove
+, .mission .iconEdit
+{
   fill: #ddd;
 }
 

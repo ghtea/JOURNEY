@@ -85,7 +85,7 @@ ${STORE["tfCreating"] ? html`
 
 
   <div class="title">
-    Journey
+    Journeys
   </div>
 
 

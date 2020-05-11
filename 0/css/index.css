@@ -254,7 +254,7 @@ body {
   width: 100%;
   
   display: grid;
-  grid-template-columns: 80px 1fr 80px;
+  grid-template-columns: 120px 1fr 120px;
   grid-template-rows: 36px;
   gap: 5px 0px;
   
@@ -322,7 +322,7 @@ body {
 
 
 
-.listMission > div {
+.mission {
   
   display: grid;
   grid-template-columns: 60px auto 60px;
@@ -355,8 +355,8 @@ body {
 }
 
 
-.listMission > div {
-  height: 36px;
+.mission {
+  min-height: 40px;
   width: 90%;
   
   font-size: 1rem;
@@ -366,6 +366,21 @@ body {
 
 }
 
+.mission > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+
+.mission .iconMove {
+  width: 20px;
+  height: 20px;
+}
+
+.mission .iconEdit {
+  width: 20px;
+  height: 20px;
+}
 
 

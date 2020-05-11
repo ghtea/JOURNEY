@@ -1,7 +1,7 @@
 import { html, Component, render, useState} from '../../common/standalone.module.js';
 
 import {STORE} from '../STORE.mjs';
-import {Show, Move} from '../../svg/basicIcons.mjs';
+import {Show, Move, Edit, X, Plus} from '../../svg/basicIcons.mjs';
 
 
 function Journey({id, title, tfOpen}) {
@@ -59,13 +59,14 @@ ${STORE => html`
 
   ${tfOpen ? html`
 <div class="partDetailsJn">
-  <div> edit </div>
-
+    
   <div
   onClick=${(event)=> startCreatingMission(event)}
-  > create mission </div>
+  > create mission</div>
   
-  <div> delete </div>
+  <div>  </div>
+
+  <div> edit Journey </div>
 </div> <!-- detailsJn -->
   `
   : html`
@@ -90,14 +91,14 @@ ${tfOpen ? html`
   `
   : html ``}
   
-  <div>
-  <div> edit </div>
+  <div class="mission">
+  <div> <${Move} /> </div>
   
   <div
   class="titleMs"
-  > - work </div>
+  > - work  </div>
   
-  <div> delete </div>
+  <div> <${Edit} /> </div>
   </div>
   
 </div> <!-- listMission -->
