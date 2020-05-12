@@ -10,14 +10,6 @@ a {
   color: #222;
 }
 
-.iconMove {
-  fill: #888;
-}
-
-.iconShow {
-  fill: #888;
-}
-
 
 .tagJn {
   border-color: #888;
@@ -41,13 +33,7 @@ a {
 }
 
 
-.journey[data-focus="yes"] .partBasicJn {
-  border-color: #02BBFF;
-}
 
-.journey[data-focus="yes"] .iconShow {
-  fill: #02BBFF;
-}
 
 .statusJn, .numMissionJn {
   border-color: #222;
@@ -69,13 +55,23 @@ a {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
+.journey .iconMove
+, .journey .iconShow
+, .journey .iconEdit 
+, .mission .iconMove
+, .mission .iconEdit
+{
+  fill: #888;
+}
+
 
 .iconCreate
-, .divShowAllJn .iconShow
-,.iconX
+
+, .iconX
 , .iconPlus 
-, .mission .iconMove
-.mission .iconEdit
+
+, .listMission .iconCreate
+
 {
   fill: #222;
 }
@@ -132,11 +128,11 @@ a {
 
 
 .iconCreate
-, .divShowAllJn .iconShow
-,.iconX
+
+, .iconX
 , .iconPlus 
-, .mission .iconMove
-, .mission .iconEdit
+
+, .listMission .iconCreate
 {
   fill: #ddd;
 }

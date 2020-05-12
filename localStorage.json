@@ -1,6 +1,6 @@
 {
   "bgColor" : "#e9f0ff",
-  "objJourneys" : "{\"1589278099690\":{\"title\":\"U\",\"id\":\"1589278099690\"},\"1589278102142\":{\"title\":\"I\",\"id\":\"1589278102142\"}}",
+  "objJourneys" : "{\"1589278099690\":{\"title\":\"U\",\"id\":\"1589278099690\",\"tfOpen\":false},\"1589278102142\":{\"title\":\"I\",\"id\":\"1589278102142\",\"tfOpen\":false},\"1589287651316\":{\"title\":\"Ii\",\"id\":\"1589287651316\"}}",
   "toDos" : "[{\"text\":\"Dd\",\"id\":1}]",
   "listWebsite" : "[{\"title\":\"Hhff\",\"url\":\"\",\"color\":8,\"key\":\"1588773813229\",\"lastClick\":1588773813229,\"numberClick\":0,\"hp\":0.8,\"sinceLastClick\":224778092},{\"title\":\"Hh\",\"url\":\"\",\"color\":5,\"key\":\"1588850455144\",\"lastClick\":1588850455144,\"numberClick\":0,\"hp\":0.8,\"sinceLastClick\":148136183},{\"title\":\"Dd\",\"url\":\"\",\"color\":4,\"key\":\"1588850455321\",\"lastClick\":1588850455321,\"numberClick\":0,\"hp\":0.8,\"sinceLastClick\":148136007}]",
   "coords" : "{\"latitude\":37.57861,\"longitude\":126.97722}"

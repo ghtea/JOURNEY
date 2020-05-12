@@ -41,7 +41,15 @@ function addJn(event, objJourneysBefore, storeObjJourneys) {
 }
   
   
-  
+  function printDate () {
+    let d = new Date();
+    
+    return html`
+      
+    ${d.getMonth()+1}. ${d.getDate()}.
+      
+    `
+  }
   
   
   
@@ -63,6 +71,7 @@ ${STORE["tfCreating"] ? html`
       <${X} />
   </div>
 
+
   <div 
   class="groupInputCreatingJn"
   >
@@ -82,7 +91,8 @@ ${STORE["tfCreating"] ? html`
 
 : html`
 
-  <div class="">
+  <div class="date">
+    ${printDate()}
   </div>
   
   <div class="title">
@@ -112,7 +122,7 @@ ${ Object.keys(STORE["objJourneys"]).map(key=>  html`
    
   tfOpen=${STORE["objJourneys"][key]["tfOpen"]} 
   
-  tfFocusedAny=${STORE["checkTfFocusedAny"]();}
+  tfFocusedAny=${STORE["tfFocusedAny"]}
 />
 
 
