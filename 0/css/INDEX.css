@@ -4,7 +4,12 @@
 /*
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');  */
 
+@import "./ALL.css";
+
 @import "./0/color.css";
+
+@import "./0/Journey.css";
+
 
 
 html {
@@ -35,6 +40,7 @@ html {
 @media (max-width: 331px) {
   html {zoom: 75%;}
 }
+
 
 
 
@@ -72,6 +78,8 @@ body {
   flex-direction: column;
   
 }
+
+
 
 
 .header {
@@ -191,196 +199,46 @@ body {
 
 
 
-
-
-
-
-#listJn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* 
+  칼럼이 늘어남에 따른 각각의 너비 정확히 지정
+  360x2 + 20x1 - 1 
+  360x1 + 20x0
+*/
+@media (max-width: 739px) {
+  .listJn {width: 360px;}
 }
 
-.journey {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  
-  width: 360px;
-  
-  margin-top: 20px;
-  
-  border-radius: 20px;
-  border-width: 2px;
-  border-style: solid;
-  
-  box-sizing: content-box;
+/*
+  각각 380 더하기
+*/
+@media (min-width: 740px) and (max-width: 1119px) {
+  .listJn {width: 740px;}
+}
+
+@media (min-width: 1120px) and  (max-width: 1499px) {
+  .listJn {width: 1120px;}
+}
+
+@media (min-width: 1500px) {
+  .listJn {width: 1500px;}
 }
 
 
 
-.partBasicJn {
-  width: 100%;
 
+.listJn {
+  margin-left: auto;
+  margin-right: auto;
   
-  border-radius: 20px;
   
   display: grid;
-  grid-template-columns: 50px 1fr 1fr 1fr 50px;
-  grid-template-rows: 50px 40px;
-  gap: 5px 5px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   
-  grid-template-areas:
-    "left title title title right"
-    "left bottomLeft bottomMiddle bottomRight right";
-  
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
+  gap: 20px;
   
 }
 
-.journey[data-focus="yes"] .partBasicJn {
-  border-radius: 20px 20px 5px 5px;
-}
 
 
-.partDetailsJn {
-  font-size: 0.9rem;
-  font-weight: 700;
-  
-  width: 100%;
-  
-  display: grid;
-  grid-template-columns: 120px 1fr 120px;
-  grid-template-rows: 36px;
-  gap: 5px 0px;
-  
-  border-radius: 0 0 20px 20px;
-  
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-}
-
-
-.divMove {grid-area: left;}
-.titleJn {grid-area: title;}
-.divShow {grid-area: right;}
-
-.statusJn {grid-area: bottomLeft;}
-
-.numDoneMissionJn {grid-area: bottomMiddle;}
-.numLeftMissionJn {grid-area: bottomRight;}
-
-
-
-
-.titleJn {
-
-  font-size: 1.2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-left: 4px;
-}
-
-
-.divMove, .journey .divShow {
-  justify-self: center;
-}
-
-
-.journey .iconMove {
-  width: 20px;
-  height: 20px;
-}
-
-.journey .iconShow {
-  width: 24px;
-  height: 24px;
-}
-
-
-.statusJn, .numDoneMissionJn, .numLeftMissionJn {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-size: 0.9rem;
-  
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 8px;
-  border-width: 1px;
-  border-style: solid;
-  box-sizing: border-box;
-}
-
-
-
-
-.mission {
-  
-  display: grid;
-  grid-template-columns: 60px auto 60px;
-  grid-template-rows: auto;
-  gap: 0px 5px;
-  
-  justify-items: center;
-  align-items: center;
-
-}
-
-.titleMs {
-  justify-self: start;
-}
-
-
-.listMission {
-  width: 100%;
-  margin-bottom: 10px;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  
-  flex-direction: column;
-  
-  border-radius: 4px;
-  
-
-}
-
-
-.mission {
-  min-height: 40px;
-  width: 90%;
-  
-  font-size: 1rem;
-  
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-
-}
-
-.mission > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.mission .iconMove {
-  width: 20px;
-  height: 20px;
-}
-
-.mission .iconEdit {
-  width: 20px;
-  height: 20px;
-}
 
 

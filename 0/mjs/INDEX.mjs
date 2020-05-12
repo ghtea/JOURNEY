@@ -13,17 +13,36 @@ constructor(props) {
    super(props);
      
    /* functions */
+   
+   /* 하나라도 열러있는지 반환 */
+   this._checkTfFocusedAny = () => {
+   Object.keys(this.state.objJourneys).map(key => {
+    
+      if (this.state.objJourneys[key]["tfOpen"] === true) {
+        return true;
+      } 
+      
+    });
+
+    return false;
+   }
+   
+   
    this._toggleOpenJn = (event, id) => {
    let { objJourneys } = this.state;
    objJourneys[id]["tfOpen"] = !objJourneys[id]["tfOpen"];
+   
    this.setState({
     objJourneys
    });
+   
  }
+ 
    
    this._toggleCreating = (event) => {
    let { tfCreating } = this.state;
    tfCreating = !tfCreating;
+   
    this.setState({
     tfCreating
    });
@@ -56,6 +75,7 @@ constructor(props) {
    } /* this._storeObjListMissions */
 
 
+
      
    this.state = {
   
@@ -66,6 +86,7 @@ constructor(props) {
    , storeObjListMissions: this._storeObjListMissions
    
    , toggleOpenJn: this._toggleOpenJn
+   , checkTfFocusedAny: this._checkTfFocusedAny
    
    , tfCreating: false
    , toggleCreating: this._toggleCreating
@@ -80,14 +101,22 @@ constructor(props) {
 componentDidMount() {
     const valFromLocalStorage = JSON.parse(localStorage.getItem("objJourneys")) || this.state.objJourneys;
     
-    this.setState(prevState => 
-    ({ objJourneys: valFromLocalStorage })
-    )
     
+    this.setState(prevState => (
     
-   /* 전부 안보이게 */Object.keys(this.state.objJourneys).map(
+       { 
+    ...prevState
+    ,objJourneys: valFromLocalStorage 
+      }
+    
+    ));
+
+
+   /* 전부 안보이게 */
+   setTimeout(()=> {
+   Object.keys(this.state.objJourneys).map(
       key => {
-   
+  
 this.setState(prevState => ({
     objJourneys: {
         ...prevState.objJourneys,
@@ -96,13 +125,14 @@ this.setState(prevState => ({
             tfOpen: false
         }
     }
-}))
-
-
-      }
-    ) /* map */
-    
-    
+})) 
+   
+      }) /* map */
+      
+   }, 10);
+   
+      
+      
 } /* componentDidMount */
 
 
@@ -118,9 +148,9 @@ render() {
 
 
 function useSortable() {
-   var el = document.getElementById('listJn');
+   var el = document.getElementsByClassName('listJn')[0];
 var sortable = Sortable.create(el, {
-	handle: ".iconMove"
+	handle: ".divMoveJn"
 });
 
 }

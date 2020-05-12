@@ -1,0 +1,203 @@
+.journey {
+  display: flex;
+  /* Journey.mjs 에서 조작중 */
+  
+  justify-content: center;
+  
+  align-items: center;
+  flex-direction: column;
+  
+  width: 360px;
+  
+  
+  box-sizing: border-box;
+}
+
+
+
+.partBasicJn {
+  width: 100%;
+
+  
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  grid-template-rows: 50px 40px;
+  gap: 5px 5px;
+  
+  grid-template-areas:
+    "left title title rightTop"
+    "left bottomLeft bottomRight rightBottom";
+  
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  
+}
+
+
+
+
+
+.divMoveJn {grid-area: left;}
+.titleJn {grid-area: title;}
+
+.divShow {grid-area: rightTop;}
+.divEditJn {grid-area: rightBottom;}
+
+
+.numDoneMissionJn {grid-area: bottomLeft;}
+.numLeftMissionJn {grid-area: bottomRight;}
+
+
+
+
+.titleJn {
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 4px;
+}
+
+
+.divMoveJn, .journey .divShow {
+  justify-self: center;
+}
+
+
+
+
+ .numDoneMissionJn, .numLeftMissionJn {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 0.9rem;
+  
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.headerMs {
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: auto;
+  gap: 0px 5px;
+  
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.titleEntireMs {
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 2rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mission {
+  
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: auto;
+  gap: 0px 5px;
+  
+  justify-items: center;
+  align-items: center;
+
+}
+
+.titleMs {
+  justify-self: start;
+}
+
+
+.listMission {
+  width: 100%;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-direction: column;
+  
+  border-radius: 4px;
+  
+
+}
+
+
+.mission {
+  min-height: 40px;
+  width: 90%;
+  
+  font-size: 1rem;
+  
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+}
+
+.mission > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* icons */
+.journey .iconMove {
+  width: 20px;
+  height: 20px;
+}
+
+.journey .iconShow {
+  width: 24px;
+  height: 24px;
+}
+
+.journey .iconEdit {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+.listMission .iconCreate {
+  width: 20px;
+  height: 20px;
+}
+
+.mission .iconMove {
+  width: 20px;
+  height: 20px;
+}
+
+.mission .iconEdit {
+  width: 20px;
+  height: 20px;
+}

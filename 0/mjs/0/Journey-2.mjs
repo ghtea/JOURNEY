@@ -3,8 +3,7 @@ import { html, Component, render, useState} from '../../common/standalone.module
 import {STORE} from '../STORE.mjs';
 import {Show, Move, Edit, X, Plus, Create} from '../../svg/basicIcons.mjs';
 
-
-
+/*
 function listMission() {
 
   const [tfCreatingMission, setCreatingMission] = useState(false);
@@ -57,28 +56,19 @@ function listMission() {
   </div>
   `
 }
+*/
 
-
-
-function Journey({id, title, tfOpen, tfFocusedAny}) {
+function Journey({id, title, tfOpen}) {
   
-  let displayJn;
-  if (!tfOpen && tfFocusedAny) {
-    displayJn = "none";
-  }
-  else {
-    displayJn = "flex";
-  }
   
   return html`
 
-    <${STORE.Consumer}>
+  <${STORE.Consumer}>
 ${STORE => html`
 
-
-  <div 
+<div 
   class="journey"
-  style="display:${displayJn};"
+  data-focus="${tfOpen ? "yes" : "no"}"
   >
   
   
@@ -117,19 +107,16 @@ ${STORE => html`
   
 </div>
 
-${tfOpen ? html` 
-  <${listMission} />
-  `
+
+${tfOpen ? html` `
   : html ``}
 
 
-</div>
-  
-  
-  `}
-  
-  <//>
-`}
+</div> 
+
+`} <//>`
+
+}
 
 
 export {Journey};

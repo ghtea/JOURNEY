@@ -26,26 +26,23 @@ a {
 
 
 .journey {
-  border-color: transparent;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .partBasicJn {
-  background-color: #f8f8f8;
+  background-color:#f8f8f8;
+  border-color: #f8f8f8;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-.partDetailsJn {
-  color: #000;
-}
 
 .journey .titleJn {
   color: #000;
 }
 
 
-.journey[data-focus="yes"] {
+.journey[data-focus="yes"] .partBasicJn {
   border-color: #02BBFF;
-  background-color: #02BBFF;
 }
 
 .journey[data-focus="yes"] .iconShow {
@@ -110,17 +107,15 @@ a {
 }
 
 .journey {
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+  
   
 }
 
 .partBasicJn {
   background-color: #191920;
+  border-color: #191920;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
 }
-.partDetailsJn {
-  /* common */
-}
-
 
 
 .journey .titleJn {
