@@ -24,16 +24,21 @@ function listMission() {
       > Missions </div>
     
     <div
+  class="divCreateMs"
   onClick=${(event)=> startCreatingMission(event)}
   > <${Create} /> </div>
   </div>
   
   
   ${tfCreatingMission ? html`
-  <div class="">
+  <div class="creatingMs">
   
     <div> exit </div>
+    
+    <div>
     <input class="inputTitleMs" type="text" placeholder="title" />
+    </div>
+    
     <div> add </div>
     
   </div>

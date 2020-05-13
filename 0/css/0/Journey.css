@@ -97,6 +97,7 @@
 
 
 .headerMs {
+  height: 45px;
   display: grid;
   grid-template-columns: 40px auto 40px;
   grid-template-rows: auto;
@@ -118,8 +119,22 @@
   align-items: center;
 }
 
+.divCreateMs {
+  
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
-.mission {
+
+
+
+.mission, .creatingMs {
   
   display: grid;
   grid-template-columns: 40px auto 40px;
@@ -190,8 +205,8 @@
 
 
 .listMission .iconCreate {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .mission .iconMove {
@@ -200,6 +215,6 @@
 }
 
 .mission .iconEdit {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }

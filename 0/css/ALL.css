@@ -22,16 +22,20 @@
 }
 
 .date {
-  /*
+  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  */
+  
   font-size: 1.3rem;
   font-weight: 700;
   
   height: 30px;
+}
+
+.date > div {
+  height: 1.6rem;
 }
 
 .divCreateJn {
@@ -129,36 +133,14 @@
 
 
 
-/* 
-  칼럼이 늘어남에 따른 각각의 너비 정확히 지정
-  360x2 + 20x1 - 1 
-  360x1 + 20x0
-*/
-@media (max-width: 739px) {
-  .listJn {width: 360px;}
-}
-
-/*
-  각각 380 더하기
-*/
-@media (min-width: 740px) and (max-width: 1119px) {
-  .listJn {width: 740px;}
-}
-
-@media (min-width: 1120px) and  (max-width: 1499px) {
-  .listJn {width: 1120px;}
-}
-
-@media (min-width: 1500px) {
-  .listJn {width: 1500px;}
-}
-
-
 
 
 .listJn {
+  display: flex;
   justify-content: center;
   align-items: flex-start;
+  
+  
   flex-direction: row;
   flex-wrap: wrap;
 

@@ -43,10 +43,31 @@ function addJn(event, objJourneysBefore, storeObjJourneys) {
   
   function printDate () {
     let d = new Date();
+    let day;
+    
+    if (d.getMonth() == 0) {
+      day ="SUN"}
+    else if (d.getMonth() == 1) {
+      day ="MON"}
+    else if (d.getMonth() == 2) {
+      day ="TUE"}
+    else if (d.getMonth() == 3) {
+      day ="WED"}
+    else if (d.getMonth() == 4) {
+      day ="THU"}
+    else if (d.getMonth() == 5) {
+      day ="FRI"}
+    else if (d.getMonth() == 6) {
+      day ="SAT"}
+      
     
     return html`
       
-    ${d.getMonth()+1}. ${d.getDate()}.
+    <div> ${d.getMonth()+1} / ${d.getDate()} </div>
+    
+    <div>
+      ${day}
+    </div>
       
     `
   }

@@ -50,6 +50,7 @@ a {
 
 .divCreateJn, .divShowAllJn
 ,.divCancelJn, .divAddJn
+,.divCreateMs
 {
   background-color: #f8f8f8;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -121,6 +122,7 @@ a {
 
 .divCreateJn, .divShowAllJn
 ,.divCancelJn, .divAddJn
+,.divCreateMs
 {
   background-color: #191920;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
