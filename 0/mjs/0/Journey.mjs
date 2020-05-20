@@ -19,7 +19,9 @@ function listMission() {
 
 
   <div class="headerMs"> 
-    <div> </div>
+  
+  ${!tfCreatingMission ? html`
+  <div> </div>
   
     <div class="titleEntireMs"
       > Missions </div>
@@ -28,23 +30,21 @@ function listMission() {
   class="divCreateMs"
   onClick=${(event)=> startCreatingMission(event)}
   > <${Create} /> </div>
-  </div>
-  
-  
-  ${tfCreatingMission ? html`
-  <div class="creatingMs">
+
+  `
+  : html`
   
     <div> exit </div>
     
     <div>
-    <input class="inputTitleMs" type="text" placeholder="title" />
+    <input class="inputTitleMs" type="text" placeholder="new mission" />
     </div>
     
     <div> add </div>
-    
+  
+  
+  `}
   </div>
-  `
-  : html``}
   
   
   

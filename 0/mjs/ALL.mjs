@@ -117,7 +117,7 @@ ${!STORE["tfCreating"]
   class="groupInputCreatingJn"
   >
   
-    <input class="inputTitleJn" type="text" placeholder="journey title" />
+    <input class="inputTitleJn" type="text" placeholder="new journey" />
 
   </div>
   

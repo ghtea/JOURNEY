@@ -40,7 +40,7 @@ a {
 }
 
 .listMission {
-  
+  border-color: #222;
 }
 
 .mission{
@@ -129,6 +129,8 @@ a {
 }
 
 
+
+
 .iconCreate
 
 , .iconX
@@ -136,7 +138,7 @@ a {
 
 , .listMission .iconCreate
 {
-  fill: #ddd;
+  fill: #888;
 }
 
 
@@ -151,6 +153,11 @@ a {
 .statusJn, .numMissionJn {
   border-color: #ddd;
 }
+
+.listMission {
+  border-color: #888;
+}
+
 
 /* dark ends */
 }

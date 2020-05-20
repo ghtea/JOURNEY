@@ -93,15 +93,25 @@
 }
 
 
+.listMission {
+  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
+  border-radius: 20px !important;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+}
 
 
 .headerMs {
-  height: 45px;
+  height: 40px;
+  
   display: grid;
-  grid-template-columns: 40px auto 40px;
+  grid-template-columns: 80px 200px 80px;
   grid-template-rows: auto;
-  gap: 0px 5px;
+  gap: 10px 0px;
   
   justify-content: center;
   justify-items: center;
@@ -118,6 +128,7 @@
   justify-content: center;
   align-items: center;
 }
+
 
 .divCreateMs {
   
