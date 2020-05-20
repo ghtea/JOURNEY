@@ -83,34 +83,9 @@ ${STORE => html`
 <div class="header">
   
 
-${STORE["tfCreating"] ? html`
+${!STORE["tfCreating"] 
 
-  <div 
-  class="divCancelJn"
-  onClick=${(event)=> STORE["toggleCreating"](event)}
-  >
-      <${X} />
-  </div>
-
-
-  <div 
-  class="groupInputCreatingJn"
-  >
-  
-    <input class="inputTitleJn" type="text" placeholder="title" />
-
-  </div>
-  
-   
-  <div 
-  class="divAddJn"
-  onClick=${(event)=> addJn(event, STORE["objJourneys"], STORE["storeObjJourneys"])}
-  >
-      <${Plus} />
-    </div>
-` 
-
-: html`
+? html`
 
   <div class="date">
     ${printDate()}
@@ -127,6 +102,34 @@ ${STORE["tfCreating"] ? html`
       <${Create} />
   </div>
 `
+
+: html`
+
+  <div 
+  class="divCancelJn"
+  onClick=${(event)=> STORE["toggleCreating"](event)}
+  >
+      <${X} />
+  </div>
+
+
+  <div 
+  class="groupInputCreatingJn"
+  >
+  
+    <input class="inputTitleJn" type="text" placeholder="journey title" />
+
+  </div>
+  
+   
+  <div 
+  class="divAddJn"
+  onClick=${(event)=> addJn(event, STORE["objJourneys"], STORE["storeObjJourneys"])}
+  >
+      <${Plus} />
+    </div>
+` 
+
 }
 
 </div>
